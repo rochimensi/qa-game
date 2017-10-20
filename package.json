@@ -6,7 +6,7 @@
   "scripts": {
     "start": "nodemon server/main.js"
   },
-  "keywords": [],
+  "keywords": ["https://github.com/rochimensi/qa-game"],
   "author": "Rosario Mensi",
   "repository": "",
   "license": "ISC",
