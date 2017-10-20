@@ -1,0 +1,19 @@
+{
+  "name": "TP_Preguntados",
+  "version": "1.0.0",
+  "description": "2-players Q&A game with a Client-Server architecture",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server/main.js"
+  },
+  "keywords": [],
+  "author": "Rosario Mensi",
+  "repository": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.12.1"
+  }
+}
