@@ -115,6 +115,6 @@ function setQuestionsSubjects() {
   questions = _.flatten(_.values(questionsData));
 }
 
-server.listen(8080, () => {
-  console.log("Servidor corriendo puerto 8080");
+server.listen(process.env.PORT || 8080), () => {
+  console.log("Servidor corriendo..");
 });
