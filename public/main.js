@@ -1,4 +1,4 @@
-let socket = io.connect('https://polar-plains-19822.herokuapp.com', { 'forceNew': true });
+let socket = io.connect('https://afternoon-springs-83827.herokuapp.com/', { 'forceNew': true });
 let questions = [];
 let questionNum = 0;
 let score = 0;
