@@ -4,7 +4,7 @@ var server = require('http').Server(app);
 var io = require('socket.io')(server);
 var _ = require('lodash');
 
-const questionsData = require('./data/questions.json');
+const questionsData = require('./questions.json');
 const COUNT = process.env.Q;
 
 var questions = [];
@@ -116,5 +116,5 @@ function setQuestionsSubjects() {
 }
 
 server.listen(8080, () => {
-  console.log("Servidor corriendo en http://localhost:8080");
+  console.log("Servidor corriendo puerto 8080");
 });

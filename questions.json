@@ -1,0 +1,79 @@
+{
+  "Medicina": [
+    {
+      "question": "¿Cuántos huesos tiene el cuerpo humano?",
+      "options": [40, 390, 206],
+      "answer": 206
+    },
+    {
+      "question": "¿Cuántos dientes tienen los humanos adultos?",
+      "options": [46, 20, 32],
+      "answer": 32
+    }
+  ],
+  "Arte": [
+    {
+      "question": "¿Quién pintó 'Las meninas'?",
+      "options": ["Francisco de Goya", "Diego Velázquez", "Salvador Dalí"],
+      "answer": "Diego Velázquez"
+    },
+    {
+      "question": "¿Quién fue bailarina principal del American Ballet?",
+      "options": ["Paloma Picasso", "Paloma Herrera", "Paloma Jimenez", "Paloma de la Paz"],
+      "answer": "Paloma Herrera"
+    }
+  ],
+  "Deporte": [
+    {
+      "question": "¿Cuántos mundiales de fútbol ganó la selección Argentina?",
+      "options": ["Ninguno", "1", "2", "3"],
+      "answer": "2"
+    },
+    {
+      "question": "¿Cuántos jugadores componen la selección Argentina de Rugby?",
+      "options": ["15", "10", "7", "11"],
+      "answer": "15"
+    }
+  ],
+  "Gastronomía": [
+    {
+      "question": "¿Cuál de las siguientes comidas es un producto lácteo?",
+      "options": ["Leche", "Yogur", "Queso", "Todas las anteriores"],
+      "answer": "Todas las anteriores"
+    },
+    {
+      "question": "¿Cuál NO es ingrediente del guacamole?",
+      "options": ["Palta", "Limón", "Ajo", "Morrón"],
+      "answer": "Ajo"
+    }
+  ],
+  "Geografía": [
+    {
+      "question": "¿Cuál es la capital de Hungría?",
+      "options": ["Viena", "Praga", "Budapest", "Estambul"],
+      "answer": "Budapest"
+    },
+    {
+      "question": "______ es un país que está en Sudamérica.",
+      "options": ["Rusia", "Argentina", "México", "Japón", "Ninguno de las anteriores"],
+      "answer": "Argentina"
+    },
+    {
+      "question": "¿Cuál de las siguientes opciones es la correcta respecto al estado?",
+      "options": ["Mississippi", "Misissippi", "Missisippi"],
+      "answer": "Mississippi"
+    }
+  ],
+  "Matemáticas": [
+    {
+      "question": "¿Cuál es la fórmulas de la relatividad?",
+      "options": ["e = mc^2", "e = m/c", "m = ec^2", "c = me^2"],
+      "answer": "e = mc^2"
+    },
+    {
+      "question": "¿Cuánto es la raíz cuadrada de 25386?",
+      "options": ["125", "33", "159.3", "234"],
+      "answer": "159.3"
+    }
+  ]
+}
