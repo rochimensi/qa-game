@@ -2,6 +2,7 @@ let socket = io.connect('https://afternoon-springs-83827.herokuapp.com/', { 'for
 let questions = [];
 let questionNum = 0;
 let score = 0;
+let blockedAswers = false;
 
 function sendName(e) {
   const username = document.getElementById('username').value;
@@ -10,6 +11,7 @@ function sendName(e) {
 }
 
 function next() {
+  blockedAswers = false;
   $('#result').hide();
   $('#third').show();
   var html = getQuestionHTML(questions[questionNum]);
@@ -18,6 +20,7 @@ function next() {
 }
 
 function answerQuestion(answer) {
+  if(blockedAswers) return;
   socket.emit('ANSWER', {answer: answer.value, id: answer.id});
   questionNum++;
 }
@@ -40,12 +43,13 @@ function getQuestionHTML(q) {
 socket.on('ANSWER_ACK', (data) => {
   $('#result').show();
   $('#fourth').show();
+  blockedAswers = true;
   if(data.correct) {
     $('#result').html('<div class="result result--correct">Correcto!!</div>');
     score++;
     $('#score').html('<p><strong>Score: ' + score + ' / ' + questions.length + '</strong></p>');
   } else {
-    $('#result').html('<div class="result result--incorrect">Incorrecto. Respuesta correcta: ' + data.answer + '</div>')
+    $('#result').html('<div class="result result--incorrect">Incorrecto. Respuesta correcta: ' + data.answer + '</div>');
   }
   if(questionNum === questions.length) {
     $('#fourth').hide();
