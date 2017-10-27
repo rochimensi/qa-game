@@ -87,6 +87,7 @@ function setQuestionsForRoomPlayer(room, player) {
     }
     var selected = _.clone(questions[index]);
     selected.id = index;
+    indexUsed.push(index);
     delete selected["answer"];
     room.questions[player].push(selected);
   }
