@@ -2,19 +2,126 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Q&A!</title>
+    <title>Q&A</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="main.js"></script>
+    <style>
+        body {
+            font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+            color: #333;
+            height: 100%;
+            background-color: #ffebbf;
+            text-align: center;
+        }
+
+        .main {
+            margin: 0 auto;
+            width: 70%;
+            padding: 40px;
+        }
+
+        .main h1 {
+            text-transform: uppercase;
+            margin-bottom: 40px;
+        }
+
+        #first {
+            width: 50%;
+            margin: 0 auto;
+        }
+
+        #username {
+            height: 36px;
+            border-radius: 2px;
+            border: 1px solid #e3e3e3;
+            box-shadow: none;
+            outline: none;
+            width: calc(100% - 7px);
+            margin-bottom: 10px;
+            padding-left: 5px;
+        }
+
+        input[type="submit"] {
+            height: 40px;
+            border-radius: 2px;
+            border: 1px solid #7cefe4;
+            box-shadow: none;
+            outline: none;
+            padding: 5px;
+            width: 100%;
+            background-color: #7cefe4;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        #fourth button {
+            margin-top: 20px;
+            height: 40px;
+            border-radius: 2px;
+            border: 1px solid #7cefe4;
+            box-shadow: none;
+            outline: none;
+            padding: 5px;
+            width: 100%;
+            background-color: #7cefe4;
+            text-transform: uppercase;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .option {
+            margin-bottom: 30px;
+            cursor: pointer;
+        }
+
+        .result {
+            padding: 20px;
+            color: #fff;
+            text-transform: uppercase;
+        }
+
+        .result--correct {
+            border: 1px solid #189717;
+            background-color: #189717;
+        }
+
+        .result--incorrect {
+            border: 1px solid #c63e3e;
+            background-color: #c63e3e;
+        }
+
+        #winner {
+            margin-top: 60px;
+            text-transform: uppercase;
+            height: 60px;
+            background-color: #5f9ea0;
+            color: #fff;
+            padding: 20px;
+        }
+    </style>
 </head>
 <body>
-<h1>Q&A!</h1>
-<div id="first">
-    <h2>Cuál es tu nombre?</h2>
-    <form onsubmit="return sendName(this)">
-        <input type="text" id="username" placeholder="Tu Nombre" >
-        <input type="submit" value="Enviar">
-    </form>
-</div>
+<div class="main">
+    <h1>Q&A: El juego de las Preguntas y Respuestas</h1>
+    <div id="first">
+        <h2>Cuál es tu nombre?</h2>
+        <form onsubmit="return sendName(this)">
+            <input type="text" id="username" placeholder="Tu Nombre" >
+            <input type="submit" value="Enviar">
+        </form>
+    </div>
 
+    <div id="second">
+        <h2>Esperando Oponente...</h2>
+    </div>
+    <div id="score"></div>
+    <div id="third"></div>
+    <div id="result"></div>
+    <div id="fourth">
+        <button onclick="next()">Siguiente Pregunta</button>
+    </div>
+    <div id="winner"></div>
+</div>
 </body>
 </html>

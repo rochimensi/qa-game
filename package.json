@@ -4,14 +4,17 @@
   "description": "2-players Q&A game with a Client-Server architecture",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon server/main.js"
+    "start": "node server.js"
   },
-  "keywords": ["https://github.com/rochimensi/qa-game"],
+  "keywords": [
+    "https://github.com/rochimensi/qa-game"
+  ],
   "author": "Rosario Mensi",
   "repository": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.2"
+    "express": "^4.16.2",
+    "lodash": "^4.17.4"
   },
   "devDependencies": {
     "nodemon": "^1.12.1"
