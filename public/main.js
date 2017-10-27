@@ -1,4 +1,4 @@
-let socket = io.connect('http://localhost:8080', { 'forceNew': true });
+let socket = io.connect('https://polar-plains-19822.herokuapp.com:8080', { 'forceNew': true });
 let questions = [];
 let questionNum = 0;
 let score = 0;

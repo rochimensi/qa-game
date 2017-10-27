@@ -6,15 +6,15 @@
   "scripts": {
     "start": "node server.js"
   },
-  "keywords": [
-    "https://github.com/rochimensi/qa-game"
-  ],
+  "keywords": ["sockets", "game"],
+  "repository": "https://github.com/rochimensi/qa-game",
   "author": "Rosario Mensi",
   "repository": "",
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.2",
-    "lodash": "^4.17.4"
+    "lodash": "^4.17.4",
+    "socket.io": "^2.0.4"
   },
   "devDependencies": {
     "nodemon": "^1.12.1"
